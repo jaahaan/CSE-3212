@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "420915959374",
+    "project_id": "hello-d4c74",
+    "storage_bucket": "hello-d4c74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420915959374:android:c3a89863d8203986b7d51f",
+        "android_client_info": {
+          "package_name": "com.example.hello"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Ij2Y44KStT-ck70ZcpMuBLl1hAwqTEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

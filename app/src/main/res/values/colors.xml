@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fire_brick_200">#E7D7C1</color>
+    <color name="fire_brick_500">#BF4342</color>
+    <color name="barn_red_700">#8C1C13</color>
+
+    <color name="papaya_whip">#FDF0D5</color>
+    <color name="air_superiority_blue_200">#A78A7F</color>
+    <color name="purssian_blue_700">#735751</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
