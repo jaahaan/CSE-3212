@@ -12,56 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
+
         <activity
-            android:name=".ButtonActivity"
+            android:name=".main.StatusBar"
+            android:exported="false" />
+        <activity
+            android:name=".main.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.ButtonActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.BirthdayCardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.SplashScreen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
             android:exported="true"
-            >
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-        </activity>
-        <activity
-            android:name=".BirthdayCardActivity"
-            android:exported="true"
-            >
-
-        </activity>
-        <activity
-            android:name=".CalculatorActivity"
-            android:exported="false"
-            android:label="Calculator" />
-        <activity
-            android:name=".Converter"
-            android:exported="false" />
-        <activity
-            android:name=".SignIn"
-            android:exported="false"
-            android:label="Sign In">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".SignUp"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".SplashScreen"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

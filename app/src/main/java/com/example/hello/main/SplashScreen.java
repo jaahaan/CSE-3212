@@ -1,4 +1,4 @@
-package com.example.hello;
+package com.example.hello.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.hello.R;
 
 public class SplashScreen extends AppCompatActivity {
 

@@ -1,6 +1,5 @@
-package com.example.hello;
+package com.example.hello.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -16,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.hello.R;
 
 public class ButtonActivity extends AppCompatActivity {
     Button red, green;
@@ -60,8 +61,8 @@ public class ButtonActivity extends AppCompatActivity {
                 text.setText("");
 
                 LayoutInflater li = getLayoutInflater();   //Creating the LayoutInflater instance
-                //Getting the View object as defined in the customtoast.xml file
-                View layout = li.inflate(R.layout.custom_toast, findViewById(R.id.custom_toast_layout));
+                //Getting the View object as defined in the .xml file
+                View layout = li.inflate(R.layout.custom_toast, findViewById(R.id.toast));
                 Toast toast = new Toast(getApplicationContext());   //Creating the Toast object
                 toast.setDuration(Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);

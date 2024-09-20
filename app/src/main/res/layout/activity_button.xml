@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".ButtonActivity">
+    android:padding="20dp"
+    tools:context=".main.ButtonActivity">
 
 
     <LinearLayout
@@ -39,11 +40,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:background="@drawable/card_bg"
+        android:background="@drawable/border"
         android:padding="10dp"
         android:textIsSelectable="true"
         android:textStyle="italic"

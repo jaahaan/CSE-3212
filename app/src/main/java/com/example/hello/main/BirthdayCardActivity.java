@@ -1,4 +1,4 @@
-package com.example.hello;
+package com.example.hello.main;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.hello.R;
 
 public class BirthdayCardActivity extends AppCompatActivity {
 
@@ -32,7 +34,13 @@ public class BirthdayCardActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setImageResource(R.drawable.cake_slice);
+                if(img.getDrawable().getConstantState() ==
+                        getResources().getDrawable(R.drawable.cake).getConstantState()){
+                    img.setImageResource(R.drawable.cake_slice);
+                } else{
+                    img.setImageResource(R.drawable.cake);
+
+                }
             }
         });
 

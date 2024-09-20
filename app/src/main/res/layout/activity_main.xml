@@ -7,7 +7,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_margin="30dp"
-    tools:context=".MainActivity">
+    android:id="@+id/main"
+    tools:context=".main.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,41 +17,54 @@
         android:gravity="center"
         >
         <Button
-            android:id="@+id/red"
+            android:id="@+id/button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Red"
-            android:backgroundTint="#FF0000"
-            android:layout_marginRight="10dp"
+            android:text="Button Activity"
+            android:textSize="15sp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
             />
         <Button
-            android:id="@+id/green"
+            android:id="@+id/card"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Green"
-            android:backgroundTint="#4CAF50"
-            android:layout_marginLeft="10dp"
+            android:text="Birthday Card"
+            android:textSize="15sp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/order"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="Order T-shirt"
+            android:textSize="15sp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            />
+        <Button
+            android:id="@+id/calculator"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="Status Bar"
+            android:textSize="15sp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
             />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:background="@drawable/border"
-        android:textColor="@color/white"
-        android:padding="10dp"/>
-
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        />
 
 
 </LinearLayout>
