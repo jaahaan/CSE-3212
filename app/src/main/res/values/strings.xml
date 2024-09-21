@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Hello</string>
-    <string name="hello_world">Hello World</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="textview_is_cleared">TextView is Cleared!!</string>
+    <string name="app_name">est</string>
+    <string name="developer">Developed by Irfan Shadik Rishad</string>
+    <string name="click">Click Me</string>
 </resources>
