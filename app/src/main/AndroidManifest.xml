@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,18 @@
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
 
+        <activity
+            android:name=".main.HelloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.CalculatorActivity"
+            android:exported="false" />
         <activity
             android:name=".main.StatusBar"
             android:exported="false" />

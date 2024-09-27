@@ -90,14 +90,16 @@ public class OrderActivity extends AppCompatActivity {
             quantity++;
             price = quantity * 250;
             quantityTextView.setText("" + quantity);
-            priceTextView.setText("$" + price);
+            priceTextView.setText("BDT " + price);
         });
         decrement.setOnClickListener(v -> {
             if(quantity>0){
                 quantity--;
                 price = quantity * 250;
                 quantityTextView.setText("" + quantity);
-                priceTextView.setText("$" + price);
+                priceTextView.setText("BDT " + price);
+            } else {
+                Toast.makeText(getApplicationContext(), "Quantity can't be negative", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -125,6 +127,7 @@ public class OrderActivity extends AppCompatActivity {
                 if (quantity == 0) {
                     Toast.makeText(getApplicationContext(), "Please add quantity!!", Toast.LENGTH_SHORT).show();
                 } else {
+
                     builder.setTitle("Order Placed!!")
                             .setMessage("Order Summary:\n" + "Clubs: " + arr + "\nT-shirt Size: " + radioValue + "\nQuantity: " + quantity + "\nTotal Price: BDT " + price + "\nRating: " + ratingBar.getRating() +"\nThank you!!")
                             .setCancelable(false)

@@ -15,7 +15,7 @@ import com.example.hello.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, card, order, calculator;
+    Button button, card, order, statusBar, calculator, form, website, random;
     private static final String TAG = "lifecycle";
 
     @Override
@@ -34,12 +34,20 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         card = findViewById(R.id.card);
         order = findViewById(R.id.order);
+        statusBar = findViewById(R.id.status_bar);
         calculator = findViewById(R.id.calculator);
+        form = findViewById(R.id.form);
+        website = findViewById(R.id.website);
+        random = findViewById(R.id.rand);
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ButtonActivity.class)));
         card.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), BirthdayCardActivity.class)));
         order.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), OrderActivity.class)));
-        calculator.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), StatusBar.class)));
+        statusBar.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), StatusBar.class)));
+        calculator.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CalculatorActivity.class)));
+        form.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), FormActivity.class)));
+        website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
+        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), HelloActivity.class)));
     }
 
     @Override
