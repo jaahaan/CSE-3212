@@ -5,6 +5,6 @@
         android:width="4dp"
         android:color="@color/fire_brick_200"
         />
-    <corners android:radius="30dp"/>
+    <corners android:radius="15dp"/>
 
 </shape>

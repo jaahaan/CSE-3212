@@ -15,7 +15,7 @@ import com.example.hello.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, card, order, statusBar, calculator, form, website, random;
+    Button button, card, order, statusBar, calculator, form, website, tech;
     private static final String TAG = "lifecycle";
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         calculator = findViewById(R.id.calculator);
         form = findViewById(R.id.form);
         website = findViewById(R.id.website);
-        random = findViewById(R.id.rand);
+        tech = findViewById(R.id.rand);
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ButtonActivity.class)));
         card.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), BirthdayCardActivity.class)));
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         calculator.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CalculatorActivity.class)));
         form.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), FormActivity.class)));
         website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
-        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), HelloActivity.class)));
+        tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), D.class)));
     }
 
     @Override

@@ -21,9 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Button Activity"
+            android:text="@string/button_activity"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
         <Button
@@ -31,9 +30,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Birthday Card"
+            android:text="@string/birthday_card"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
     </LinearLayout>
@@ -48,9 +46,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Order T-shirt"
+            android:text="@string/order_t_shirt"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
         <Button
@@ -58,9 +55,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Status Bar"
+            android:text="@string/status_bar"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
     </LinearLayout>
@@ -75,9 +71,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Calculator"
+            android:text="@string/calculator"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
         <Button
@@ -85,9 +80,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Form"
+            android:text="@string/form"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
     </LinearLayout>
@@ -103,9 +97,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="WebView Activity"
+            android:text="@string/webview_activity"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
         <Button
@@ -113,9 +106,8 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="Random"
+            android:text="@string/tech_activity"
             android:textSize="15sp"
-            android:background="@drawable/border"
             android:layout_margin="10dp"
             />
     </LinearLayout>
