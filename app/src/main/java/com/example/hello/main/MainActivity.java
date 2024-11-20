@@ -15,7 +15,7 @@ import com.example.hello.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, card, order, statusBar, calculator, form, website, tech;
+    Button button, card, order, statusBar, calculator, form, tech, recycler, website, random;
     private static final String TAG = "lifecycle";
 
     @Override
@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         calculator = findViewById(R.id.calculator);
         form = findViewById(R.id.form);
         website = findViewById(R.id.website);
-        tech = findViewById(R.id.rand);
+        tech = findViewById(R.id.listViewActivity);
+        recycler = findViewById(R.id.recyclerViewActivity);
+        random = findViewById(R.id.rand);
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ButtonActivity.class)));
         card.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), BirthdayCardActivity.class)));
@@ -46,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
         statusBar.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), StatusBar.class)));
         calculator.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CalculatorActivity.class)));
         form.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), FormActivity.class)));
+        tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TechActivity.class)));
+        recycler.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class)));
         website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
-        tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), D.class)));
+        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), B.class)));
+
     }
 
     @Override

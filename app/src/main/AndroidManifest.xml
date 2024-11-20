@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
         <activity
+            android:name=".main.RecyclerDescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.ReActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.ExpandableListActivity"
             android:exported="false" />
         <activity
