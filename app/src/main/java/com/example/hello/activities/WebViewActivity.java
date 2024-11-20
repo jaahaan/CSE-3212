@@ -1,4 +1,4 @@
-package com.example.hello.main;
+package com.example.hello.activities;
 
 import android.os.Bundle;
 import android.webkit.WebSettings;

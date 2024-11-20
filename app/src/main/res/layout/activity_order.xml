@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="30dp"
-    tools:context=".main.OrderActivity">
+    tools:context=".activities.OrderActivity">
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,39 +1,32 @@
-package com.example.hello.main;
+package com.example.hello.activities;
 
 import android.os.Bundle;
-import android.widget.SearchView;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hello.R;
-import com.example.hello.main.adapter.RecyclerViewAdapter;
-import com.example.hello.main.model.Model;
+import com.example.hello.adapter.TechAdapter;
 
-import java.util.ArrayList;
+public class TechActivity extends AppCompatActivity {
 
-public class RecyclerViewActivity extends AppCompatActivity {
-
-    RecyclerView recyclerView;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_recycler_view);
+        setContentView(R.layout.activity_tech);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        recyclerView = findViewById(R.id.recyclerView);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        listView = findViewById(R.id.listView);
         String[] title = getResources().getStringArray(R.array.tech_array);
         String[] subtitle ={
                 "Sub Title 1","Sub Title 2",
@@ -45,19 +38,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         Integer[] imgid= {R.drawable.android, R.drawable.java, R.drawable.php, R.drawable.python,
                 R.drawable.cpp, R.drawable.ruby, R.drawable.ajax, R.drawable.rails,
                 R.drawable.net, R.drawable.perl };
-        ArrayList<Model> data = new ArrayList<>();
 
-        for (int i = 0; i<title.length; i++){
-            Model obj = new Model();
-            obj.setTitle(title[i]);
-            obj.setSubtitle(subtitle[i]);
-            obj.setImageId(imgid[i]);
-            data.add(obj);
-        }
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getApplicationContext());
+        TechAdapter adapter = new TechAdapter(this, title, subtitle, imgid);
 
-        recyclerView.setAdapter(adapter);
+        listView.setAdapter(adapter);
     }
 }
-

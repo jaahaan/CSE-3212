@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_margin="30dp"
     android:gravity="center"
-    tools:context=".main.FormActivity">
+    tools:context=".activities.FormActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

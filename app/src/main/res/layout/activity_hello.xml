@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".main.HelloActivity">
+    tools:context=".activities.HelloActivity">
 
     <ImageView
         android:id="@+id/imageView"

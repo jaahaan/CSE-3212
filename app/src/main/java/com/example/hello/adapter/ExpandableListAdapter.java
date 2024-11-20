@@ -1,4 +1,4 @@
-package com.example.hello.main.adapter;
+package com.example.hello.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

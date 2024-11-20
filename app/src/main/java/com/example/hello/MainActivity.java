@@ -1,4 +1,4 @@
-package com.example.hello.main;
+package com.example.hello;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.hello.R;
+import com.example.hello.activities.BirthdayCardActivity;
+import com.example.hello.activities.ButtonActivity;
+import com.example.hello.activities.CalculatorActivity;
+import com.example.hello.activities.FormActivity;
+import com.example.hello.activities.OrderActivity;
+import com.example.hello.activities.RecyclerViewActivity;
+import com.example.hello.activities.StatusBar;
+import com.example.hello.activities.TechActivity;
+import com.example.hello.activities.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TechActivity.class)));
         recycler.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class)));
         website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
-        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), B.class)));
+//        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), B.class)));
 
     }
 

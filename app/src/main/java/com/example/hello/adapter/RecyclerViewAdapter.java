@@ -1,4 +1,4 @@
-package com.example.hello.main.adapter;
+package com.example.hello.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hello.R;
-import com.example.hello.main.RecyclerDescriptionActivity;
-import com.example.hello.main.model.Model;
+import com.example.hello.activities.RecyclerDescriptionActivity;
+import com.example.hello.model.Model;
 
 import java.util.ArrayList;
 

@@ -15,71 +15,71 @@
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
         <activity
-            android:name=".main.RecyclerDescriptionActivity"
+            android:name=".activities.RecyclerDescriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".main.ReActivity"
+            android:name=".activities.ReActivity"
             android:exported="false" />
         <activity
-            android:name=".main.RecyclerViewActivity"
+            android:name=".activities.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".main.ExpandableListActivity"
+            android:name=".activities.ExpandableListActivity"
             android:exported="false" />
         <activity
-            android:name=".main.LabTestActivity"
+            android:name=".activities.LabTestActivity"
             android:exported="false" />
         <activity
-            android:name=".main.E"
+            android:name=".E"
             android:exported="false" />
         <activity
-            android:name=".main.A"
+            android:name=".A"
             android:exported="false" />
         <activity
-            android:name=".main.B"
+            android:name=".B"
             android:exported="false" />
         <activity
-            android:name=".main.C"
+            android:name=".C"
             android:exported="false" />
         <activity
-            android:name=".main.TechActivity"
+            android:name=".activities.TechActivity"
             android:exported="false" />
         <activity
-            android:name=".main.D"
+            android:name=".D"
             android:exported="false" />
         <activity
-            android:name=".main.HelloActivity"
+            android:name=".activities.HelloActivity"
             android:exported="false" />
         <activity
-            android:name=".main.WebViewActivity"
+            android:name=".activities.WebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".main.FormActivity"
+            android:name=".activities.FormActivity"
             android:exported="false" />
         <activity
-            android:name=".main.CalculatorActivity"
+            android:name=".activities.CalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".main.StatusBar"
+            android:name=".activities.StatusBar"
             android:exported="false" />
         <activity
-            android:name=".main.OrderActivity"
+            android:name=".activities.OrderActivity"
             android:exported="false" />
         <activity
-            android:name=".main.ButtonActivity"
+            android:name=".activities.ButtonActivity"
             android:exported="true" />
         <activity
-            android:name=".main.BirthdayCardActivity"
+            android:name=".activities.BirthdayCardActivity"
             android:exported="true" />
         <activity
-            android:name=".main.SplashScreen"
+            android:name=".activities.SplashScreen"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="">
             <intent-filter>

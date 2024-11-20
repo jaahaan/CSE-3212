@@ -1,4 +1,4 @@
-package com.example.hello.main.model;
+package com.example.hello.model;
 
 public class Model {
     private String title;

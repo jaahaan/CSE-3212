@@ -1,7 +1,6 @@
-package com.example.hello.main;
+package com.example.hello.activities;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;

@@ -1,4 +1,4 @@
-package com.example.hello.main;
+package com.example.hello.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hello.R;
-import com.example.hello.main.adapter.ExpandableListAdapter;
+import com.example.hello.adapter.ExpandableListAdapter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
