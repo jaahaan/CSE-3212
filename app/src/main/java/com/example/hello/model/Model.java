@@ -5,10 +5,24 @@ public class Model {
     private String subtitle;
     private int imageId;
 
+    public Model() {
+
+    }
+
+    public Model(String title, String subtitle) {
+        this.title = title;
+        this.subtitle = subtitle;
+    }
+
+    public Model(String title, String subtitle, int imageId) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.imageId = imageId;
+    }
+
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }

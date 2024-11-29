@@ -1,8 +1,14 @@
 package com.example.hello.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -10,16 +16,34 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hello.MainActivity;
 import com.example.hello.R;
 import com.example.hello.adapter.RecyclerViewAdapter;
 import com.example.hello.model.Model;
+import com.example.hello.model.TechModel;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-
+    RecyclerViewAdapter adapter;
+    ArrayList<Model> list = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +55,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
             return insets;
         });
         recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         String[] title = getResources().getStringArray(R.array.tech_array);
         String[] subtitle ={
                 "Sub Title 1","Sub Title 2",
@@ -44,19 +69,18 @@ public class RecyclerViewActivity extends AppCompatActivity {
         Integer[] imgid= {R.drawable.android, R.drawable.java, R.drawable.php, R.drawable.python,
                 R.drawable.cpp, R.drawable.ruby, R.drawable.ajax, R.drawable.rails,
                 R.drawable.net, R.drawable.perl };
-        ArrayList<Model> data = new ArrayList<>();
 
         for (int i = 0; i<title.length; i++){
-            Model obj = new Model();
-            obj.setTitle(title[i]);
-            obj.setSubtitle(subtitle[i]);
-            obj.setImageId(imgid[i]);
-            data.add(obj);
+            Model obj = new Model(title[i], subtitle[i], imgid[i]);
+            list.add(obj);
         }
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getApplicationContext());
-
+        adapter = new RecyclerViewAdapter(list, getApplicationContext());
         recyclerView.setAdapter(adapter);
+
     }
+
+
 }
 

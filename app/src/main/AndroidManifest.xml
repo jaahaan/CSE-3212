@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
         android:allowBackup="true"
@@ -15,14 +17,26 @@
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
         <activity
+            android:name=".activities.BooksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddTechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CoursesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.RecyclerDescriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.ReActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.RecyclerViewActivity"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".activities.ExpandableListActivity"
             android:exported="false" />
@@ -46,7 +60,7 @@
             android:exported="false" />
         <activity
             android:name=".D"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".activities.HelloActivity"
             android:exported="false" />
@@ -73,7 +87,13 @@
             android:exported="true" />
         <activity
             android:name=".activities.SplashScreen"
-            android:exported="false">
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -82,12 +102,6 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -30,7 +30,7 @@ public class RecyclerDescriptionActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         title = findViewById(R.id.title);
         subtitle = findViewById(R.id.subtitle);
-        imageView.setImageResource(getIntent().getIntExtra("image", 0));
+        imageView.setImageResource(getIntent().getIntExtra("imgId", 0));
         title.setText(getIntent().getStringExtra("title"));
         subtitle.setText(getIntent().getStringExtra("subtitle"));
     }

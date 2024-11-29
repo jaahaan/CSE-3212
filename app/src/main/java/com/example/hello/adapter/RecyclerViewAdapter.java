@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hello.R;
 import com.example.hello.activities.RecyclerDescriptionActivity;
 import com.example.hello.model.Model;
+import com.example.hello.model.TechModel;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent intent = new Intent(context, RecyclerDescriptionActivity.class);
                 intent.putExtra("title", temp.getTitle());
                 intent.putExtra("subtitle", temp.getSubtitle());
-                intent.putExtra("image", temp.getImageId());
+                intent.putExtra("image", R.drawable.android);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

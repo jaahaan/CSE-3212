@@ -3,9 +3,12 @@ package com.example.hello;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -17,14 +20,28 @@ import com.example.hello.activities.CalculatorActivity;
 import com.example.hello.activities.FormActivity;
 import com.example.hello.activities.OrderActivity;
 import com.example.hello.activities.RecyclerViewActivity;
+import com.example.hello.activities.SignInActivity;
 import com.example.hello.activities.StatusBar;
 import com.example.hello.activities.TechActivity;
 import com.example.hello.activities.WebViewActivity;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, card, order, statusBar, calculator, form, tech, recycler, website, random;
+    Button button, card, order, statusBar, calculator, form, tech, recycler, website, random, signOut;
     private static final String TAG = "lifecycle";
+
+    FirebaseUser user;
+    FirebaseFirestore firestore;
+
+    TextView name, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +66,24 @@ public class MainActivity extends AppCompatActivity {
         tech = findViewById(R.id.listViewActivity);
         recycler = findViewById(R.id.recyclerViewActivity);
         random = findViewById(R.id.rand);
+        signOut = findViewById(R.id.signOut);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
+//        auth = FirebaseAuth.getInstance();
+        user= FirebaseAuth.getInstance().getCurrentUser();
+//        firestore = FirebaseFirestore.getInstance();
+        assert user != null;
+        DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(user.getUid());
+        df.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (value != null && value.exists()) {
+                    name.setText(value.getString("name"));
+                    email.setText(value.getString("email"));
+                }
+            }
+        });
+
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ButtonActivity.class)));
         card.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), BirthdayCardActivity.class)));
@@ -59,7 +94,12 @@ public class MainActivity extends AppCompatActivity {
         tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TechActivity.class)));
         recycler.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class)));
         website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
-//        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), B.class)));
+        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), C.class)));
+        signOut.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+            finish();
+        });
 
     }
 
