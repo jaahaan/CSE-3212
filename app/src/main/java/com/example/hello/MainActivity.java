@@ -3,7 +3,6 @@ package com.example.hello;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,17 +13,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.hello.C.C;
 import com.example.hello.activities.BirthdayCardActivity;
 import com.example.hello.activities.ButtonActivity;
 import com.example.hello.activities.CalculatorActivity;
 import com.example.hello.activities.FormActivity;
 import com.example.hello.activities.OrderActivity;
-import com.example.hello.activities.RecyclerViewActivity;
-import com.example.hello.activities.SignInActivity;
+import com.example.hello.recyclerView.RecyclerViewActivity;
+import com.example.hello.auth.SignInActivity;
 import com.example.hello.activities.StatusBar;
-import com.example.hello.activities.TechActivity;
+import com.example.hello.listView.ListViewActivity;
 import com.example.hello.activities.WebViewActivity;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.example.hello.tech.TechListActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -35,14 +35,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, card, order, statusBar, calculator, form, tech, recycler, website, random, signOut;
+    Button button, card, order, statusBar, calculator, form, listView, recycler, website, tech, signOut;
     private static final String TAG = "lifecycle";
 
     FirebaseUser user;
-    FirebaseFirestore firestore;
-
     TextView name, email;
-
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,18 +61,18 @@ public class MainActivity extends AppCompatActivity {
         calculator = findViewById(R.id.calculator);
         form = findViewById(R.id.form);
         website = findViewById(R.id.website);
-        tech = findViewById(R.id.listViewActivity);
+        listView = findViewById(R.id.listViewActivity);
         recycler = findViewById(R.id.recyclerViewActivity);
-        random = findViewById(R.id.rand);
+        tech = findViewById(R.id.rand);
         signOut = findViewById(R.id.signOut);
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
-//        auth = FirebaseAuth.getInstance();
-        user= FirebaseAuth.getInstance().getCurrentUser();
+        auth = FirebaseAuth.getInstance();
+        user= auth.getCurrentUser();
 //        firestore = FirebaseFirestore.getInstance();
         assert user != null;
-        DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(user.getUid());
-        df.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+        DocumentReference reference = FirebaseFirestore.getInstance().collection("Users").document(user.getUid());
+        reference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null && value.exists()) {
@@ -91,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
         statusBar.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), StatusBar.class)));
         calculator.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CalculatorActivity.class)));
         form.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), FormActivity.class)));
-        tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TechActivity.class)));
+        listView.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ListViewActivity.class)));
         recycler.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class)));
         website.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewActivity.class)));
-        random.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), C.class)));
+        tech.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), C.class)));
         signOut.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(getApplicationContext(), SignInActivity.class));

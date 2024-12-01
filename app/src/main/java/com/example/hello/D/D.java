@@ -1,32 +1,36 @@
-package com.example.hello.activities;
+package com.example.hello.D;
 
 import android.os.Bundle;
-import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hello.R;
-import com.example.hello.adapter.TechAdapter;
 
-public class TechActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
-    ListView listView;
+public class D extends AppCompatActivity {
+
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tech);
+        setContentView(R.layout.activity_d);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        listView = findViewById(R.id.listView);
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         String[] title = getResources().getStringArray(R.array.tech_array);
         String[] subtitle ={
                 "Sub Title 1","Sub Title 2",
@@ -38,10 +42,15 @@ public class TechActivity extends AppCompatActivity {
         Integer[] imgid= {R.drawable.android, R.drawable.java, R.drawable.php, R.drawable.python,
                 R.drawable.cpp, R.drawable.ruby, R.drawable.ajax, R.drawable.rails,
                 R.drawable.net, R.drawable.perl };
-
-
-        TechAdapter adapter = new TechAdapter(this, title, subtitle, imgid);
-
-        listView.setAdapter(adapter);
+        ArrayList<ModelD> list = new ArrayList<>();
+        for (int i=0; i<title.length; i++){
+            ModelD obj = new ModelD(title[i], subtitle[i], imgid[i]);
+//            obj.setTitle(title[i]);
+//            obj.setSubtitle(subtitle[i]);
+//            obj.setImageId(imgid[i]);
+            list.add(obj);
+        }
+        CustomAdapterD adapterD = new CustomAdapterD(list, this);
+        recyclerView.setAdapter(adapterD);
     }
 }

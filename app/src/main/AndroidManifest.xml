@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
 
     <application
         android:allowBackup="true"
@@ -16,51 +17,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello"
         tools:targetApi="31">
+
         <activity
-            android:name=".activities.BooksActivity"
+            android:name=".tech.TechListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".tech.AddTechActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.AddTechActivity"
+            android:name=".auth.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.CoursesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.SignInActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.SignUpActivity"
+            android:name=".auth.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.RecyclerDescriptionActivity"
+            android:name=".recyclerView.RecyclerDescriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.RecyclerViewActivity"
-            android:exported="true"></activity>
+            android:name=".recyclerView.RecyclerViewActivity"
+            android:exported="false" />
         <activity
-            android:name=".activities.ExpandableListActivity"
+            android:name=".expandableListView.ExpandableListActivity"
             android:exported="false" />
         <activity
             android:name=".activities.LabTestActivity"
             android:exported="false" />
         <activity
-            android:name=".E"
+            android:name=".E.E"
             android:exported="false" />
         <activity
-            android:name=".A"
+            android:name=".A.A"
             android:exported="false" />
         <activity
-            android:name=".B"
+            android:name=".B.B"
             android:exported="false" />
         <activity
-            android:name=".C"
+            android:name=".C.C"
             android:exported="false" />
         <activity
-            android:name=".activities.TechActivity"
+            android:name=".listView.ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".D"
-            android:exported="true"></activity>
+            android:name=".D.D"
+            android:exported="true" />
         <activity
             android:name=".activities.HelloActivity"
             android:exported="false" />
@@ -106,6 +106,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://@myCloudName"/>
     </application>
+
 
 </manifest>

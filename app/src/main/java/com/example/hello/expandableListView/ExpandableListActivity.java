@@ -1,4 +1,4 @@
-package com.example.hello.activities;
+package com.example.hello.expandableListView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +12,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hello.R;
-import com.example.hello.adapter.ExpandableListAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

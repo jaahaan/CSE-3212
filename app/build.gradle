@@ -51,8 +51,15 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:21.2.0'
     implementation platform('com.google.firebase:firebase-bom:33.6.0')
 
-    //To manage permission
-    implementation 'com.karumi:dexter:6.2.2'
+    //image downloading and caching library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //For circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //cloudinary sdk
+    implementation 'com.cloudinary:cloudinary-android:3.0.2'
 
 }
 //apply plugin: 'com.google.gms.google-services'

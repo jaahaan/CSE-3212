@@ -1,4 +1,4 @@
-package com.example.hello.activities;
+package com.example.hello.recyclerView;
 
 import android.os.Bundle;
 import android.widget.ImageView;

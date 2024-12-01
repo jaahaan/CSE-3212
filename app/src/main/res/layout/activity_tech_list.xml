@@ -5,13 +5,36 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recyclerView.RecyclerViewActivity">
+    tools:context=".tech.TechListActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/Widget.Design.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="TODO"
+        android:elevation="3dp"
+        android:src="@drawable/baseline_add_24"
+        app:fabSize="normal" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerView"
         android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No data Found"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:visibility="gone"
         />
 
     <ProgressBar

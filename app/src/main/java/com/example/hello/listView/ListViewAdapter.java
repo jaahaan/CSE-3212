@@ -1,4 +1,4 @@
-package com.example.hello.adapter;
+package com.example.hello.listView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,13 +12,13 @@ import androidx.annotation.NonNull;
 
 import com.example.hello.R;
 
-public class TechAdapter extends BaseAdapter {
+public class ListViewAdapter extends BaseAdapter {
     String[] title;
     String[] subtitle;
     Integer[] img;
     Context context;
 
-    public TechAdapter(@NonNull Context context, String[] title, String[] subtitle, Integer[] img) {
+    public ListViewAdapter(@NonNull Context context, String[] title, String[] subtitle, Integer[] img) {
         this.context = context;
         this.title = title;
         this.subtitle = subtitle;

@@ -1,20 +1,11 @@
-package com.example.hello.model;
+package com.example.hello.D;
 
-public class Model {
+public class ModelD {
     private String title;
     private String subtitle;
     private int imageId;
 
-    public Model() {
-
-    }
-
-    public Model(String title, String subtitle) {
-        this.title = title;
-        this.subtitle = subtitle;
-    }
-
-    public Model(String title, String subtitle, int imageId) {
+    public ModelD(String title, String subtitle, int imageId) {
         this.title = title;
         this.subtitle = subtitle;
         this.imageId = imageId;
@@ -23,16 +14,9 @@ public class Model {
     public String getTitle() {
         return title;
     }
+
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public int getImageId() {
-        return imageId;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
     }
 
     public String getSubtitle() {
@@ -41,5 +25,13 @@ public class Model {
 
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 }

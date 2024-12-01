@@ -1,4 +1,4 @@
-package com.example.hello.adapter;
+package com.example.hello.expandableListView;
 
 import android.content.Context;
 import android.view.LayoutInflater;

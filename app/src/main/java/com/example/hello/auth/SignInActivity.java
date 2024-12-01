@@ -1,4 +1,4 @@
-package com.example.hello.activities;
+package com.example.hello.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +16,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.hello.A;
-import com.example.hello.B;
-import com.example.hello.C;
 import com.example.hello.MainActivity;
 import com.example.hello.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,8 +23,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.util.regex.Pattern;
 
 public class SignInActivity extends AppCompatActivity {
     private EditText emailEditText, passEditText;
@@ -79,16 +74,14 @@ public class SignInActivity extends AppCompatActivity {
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                 finish();
                             }else {
-                                    // Email not verified
-                                    Toast.makeText(getApplicationContext(), "Please verify your email.", Toast.LENGTH_SHORT).show();
-                                    auth.signOut();
+                                // Email not verified
+                                Toast.makeText(getApplicationContext(), "Please verify your email.", Toast.LENGTH_SHORT).show();
+                                auth.signOut();
                             }
                         } else {
                             Toast.makeText(getApplicationContext(), "Login Failed!!", Toast.LENGTH_SHORT).show();
                         }
                     }
-
-
             });
 
 

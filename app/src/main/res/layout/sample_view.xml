@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textSize="30sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 />
             <TextView
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Subtitle"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 />
         </LinearLayout>

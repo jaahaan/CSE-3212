@@ -13,7 +13,8 @@
     <string name="birthday_card">Birthday Card</string>
     <string name="button_activity">Button Activity</string>
     <string name="gander">Gander</string>
-    <string name="recyclerview_activity">RecyclerView Activity</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="listview">ListView</string>
 
 
     <string-array name="tech_array">
